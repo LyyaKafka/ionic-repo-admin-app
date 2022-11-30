@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>ID: {{ document.id }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Judul: {{ document.title }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Kategori: {{ document.kategori }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Link: {{ document.url }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Penulis: </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label class="ion-padding-start"
+      >Id User: {{ documentAuthor?.uid }}</ion-label
+    >
+  </ion-item>
+  <ion-item>
+    <ion-label class="ion-padding-start"
+      >Nama: {{ documentAuthor?.username }}</ion-label
+    >
+  </ion-item>
+  <ion-item>
+    <ion-label class="ion-padding-start"
+      >Email: {{ documentAuthor?.email }}</ion-label
+    >
+  </ion-item>
+  <ion-item>
+    <!-- <ion-buttons slot="end">
+      <ion-button fill="outline" color="tertiary">Author's Doc List</ion-button>
+      <ion-button (click)="privateAlert()" fill="outline" color="tertiary"
+        >To Private</ion-button
+      >
+    </ion-buttons> -->
+  </ion-item>
+  <ion-item>
+    <ion-buttons slot="end">
+      <a [href]="downloadLink" [download]="filename">
+        <ion-button (click)="downloadDocument()" fill="outline" color="tertiary"
+          >Download</ion-button
+        >
+      </a>
+      <!-- <a [href]="downloadLink" target="_blank" rel="noreferrer">
+        <ion-button (click)="downloadDocument()" fill="outline" color="tertiary"
+          >Preview</ion-button
+        >
+      </a> -->
+
+      <ion-button (click)="deleteDocument()" fill="outline" color="tertiary"
+        >Delete</ion-button
+      >
+    </ion-buttons>
+  </ion-item>
+</ion-content>

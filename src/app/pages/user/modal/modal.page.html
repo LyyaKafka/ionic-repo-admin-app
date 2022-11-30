@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>ID: {{ user.uid }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nama: {{ user.username }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email: {{ user.email }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Jumlah Dokumen: {{ userDocumentCount }}</ion-label>
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" color="danger">Block</ion-button>
+    </ion-buttons>
+  </ion-item> -->
+</ion-content>
